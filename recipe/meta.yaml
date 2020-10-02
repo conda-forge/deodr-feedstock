@@ -1,5 +1,5 @@
 {% set name = "deodr" %}
-{% set version = "0.1.15" %}
+{% set version = "0.1.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aaeda98f51d4c7b20a5bf975dba80e9f882764e72b81d1f4a2d1dc44615f7f1e
+  sha256: 2cf0dbde3439d64581f72864a0a97ca93fcf7639029a621ed5e9b3138431cced
   # patches:
   #   # Currently the required CXX file for build isn't packaged in the release, so generated here.
   #   - setup_CXX.patch
 
 build:
-  number: 1
-  script:
-    {{ PYTHON }} -m pip install . -vv
-  skip: True  # [py<36 or win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<36 or win]
 
 requirements:
   build:
@@ -41,7 +40,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'DEODR (for Discontinuity-Edge-Overdraw based Differentiable Renderer) is a differentiable 3D mesh renderer written in C with Python and Matlab bindings.'
+  summary: DEODR (for Discontinuity-Edge-Overdraw based Differentiable Renderer) is a differentiable 3D mesh renderer written in C with Python and Matlab bindings.
   dev_url: https://github.com/martinResearch/DEODR/
 
 extra:
