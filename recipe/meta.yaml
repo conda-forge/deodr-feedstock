@@ -13,7 +13,7 @@ source:
   #   - setup_CXX.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<36 or win]
 
@@ -45,6 +45,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - ndmaxar
     - oblute
     - rluria14
