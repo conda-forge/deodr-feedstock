@@ -1,5 +1,5 @@
 {% set name = "deodr" %}
-{% set version = "0.1.19" %}
+{% set version = "0.1.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0275e396b8a79c2c8b03603e350877c9dfae17587fb998739dd7bb5b8bc6f433
+  sha256: 3c4de8ee201cb17eccdaa566b88714d47ea95b6e6b9ded1005b8d26b9b2a3e64
   # patches:
   #   # Currently the required CXX file for build isn't packaged in the release, so generated here.
   #   - setup_CXX.patch
